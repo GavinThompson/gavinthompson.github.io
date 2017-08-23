@@ -33,7 +33,8 @@
 
         </div>
       </header>
-      <div class="mdl-layout__drawer mdl-shadow--8dp">
+      <div class="mdl-layout__drawer mdl-shadow--8dp" id="sideDrawer">
+        
         <span class="mdl-layout-title">Gavin Thompson</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="#about">
@@ -52,6 +53,10 @@
             <i class="material-icons">search</i> Contact
           </a>
         </nav>
+
+        <canvas id="drawerCanvas">
+        </canvas>
+        
       </div>
       <main class="mdl-layout__content">
         <div class="page-content mdl-color--grey-100">
@@ -410,6 +415,7 @@
 
     <!-- libs -->
     <script src="js/anchor-scroll.min.js"></script>
+    <script src="js/oil-painting.js"></script>
   </body>
 </html>
 

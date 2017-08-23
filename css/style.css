@@ -164,3 +164,13 @@ section.section--center .section__text:not(:last-child) {
 .mdl-menu__container {
   z-index: 99;
 }
+
+
+/* canvas */
+
+canvas.paint{
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
