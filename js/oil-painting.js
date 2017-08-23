@@ -1,26 +1,37 @@
+// Oil Painting
+// Ported from flash project - http://wonderfl.net/c/92Ul
+
+// https://codepen.io/tholman/pen/ifDak
+
 function OilPainting(){
   
   var canvas;
   var context;
+  var parent
 
   var width;
   var height;
 
-  var startPos = {x: window.innerWidth/2, y: window.innerHeight/2};
-  var prevPos = {x: window.innerWidth/2, y: 0};
+  var startPos;
+  var prevPos;
   var dist = {x: 0, y: 0};
   var colour = '#'+Math.floor(Math.random()*16777215).toString(16);
   
   
-  this.initialize = function(){
-    canvas  = document.getElementById("canvas");
+  this.initialize = function(canvasElement, parentElement){
+    canvas  = document.getElementById( canvasElement );
     context = canvas.getContext('2d');
-  
-    width = window.innerWidth
-    height = window.innerHeight
+
+    parent = document.getElementById( parentElement );
+
+    width = parent.width
+    height = parent.height
     
     canvas.width = width;
     canvas.height = height;
+
+    startPos = {x: parent.innerWidth/2, y: parent.innerHeight/2};
+    prevPos = {x: parent.innerWidth/2, y: 0};
   
     canvas.addEventListener('mousemove', MouseMove, false);
     canvas.addEventListener('click', MouseDown, false);
@@ -85,5 +96,5 @@ function OilPainting(){
     
 }
 
-var app = new OilPainting();
-app.initialize();
+var background = new OilPainting();
+background.initialize( "canvasBackdrop", "content" );

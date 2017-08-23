@@ -3,6 +3,7 @@
 main .page-content {
   padding: 8px;
   padding-top: 48px;
+  position: initial;
 }
 
 .mdl-card {
@@ -168,9 +169,10 @@ section.section--center .section__text:not(:last-child) {
 
 /* canvas */
 
-canvas.paint{
+canvas{
   position:absolute;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  top: 0;
+  z-index: 0;
 }
