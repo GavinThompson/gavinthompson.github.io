@@ -24,14 +24,18 @@ function OilPainting(){
 
     parent = document.getElementById( parentElement );
 
-    width = parent.width
-    height = parent.height
+    width = parent.offsetWidth
+    height = parent.offsetHeight
     
     canvas.width = width;
     canvas.height = height;
 
-    startPos = {x: parent.innerWidth/2, y: parent.innerHeight/2};
-    prevPos = {x: parent.innerWidth/2, y: 0};
+    console.log(parent.style)
+    console.log( width, height)
+    console.log( canvas.width, canvas.height )
+
+    startPos = {x: width/2, y: height/2};
+    prevPos = {x: width/2, y: 0};
   
     canvas.addEventListener('mousemove', MouseMove, false);
     canvas.addEventListener('click', MouseDown, false);
@@ -40,6 +44,9 @@ function OilPainting(){
   
   
   var MouseMove = function(e) {
+
+    console.log("mousemove");
+
     var distance = Math.sqrt(Math.pow(prevPos.x - startPos.x, 2) +
                  Math.pow(prevPos.y - startPos.y, 2));
                  
