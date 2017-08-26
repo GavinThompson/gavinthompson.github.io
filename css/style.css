@@ -187,6 +187,9 @@ section.section--center .section__text:not(:last-child) {
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+.section__portfolio-img img{
+  max-width: 240px;
+}
 
 /* canvas */
 
