@@ -10,6 +10,7 @@ main .page-content {
   height: auto;
   display: flex;
   flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .mdl-card > * {
@@ -74,7 +75,7 @@ section > header{
   align-items: center;
   justify-content: center;
 }
-section > .section__play-btn {
+section > .section__portfolio-img {
   min-height: 200px;
 }
 section > header > .material-icons {
@@ -164,6 +165,26 @@ section.section--center .section__text:not(:last-child) {
 }
 .mdl-menu__container {
   z-index: 99;
+}
+
+/*  */
+
+.section__circle-container__circle img{
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.skills .mdl-chip__contact .material-icons{
+  position: relative;
+  top: 3px;
+}
+
+.section__portfolio-img{
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 100;
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 
