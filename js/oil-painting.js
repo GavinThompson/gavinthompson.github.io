@@ -30,9 +30,9 @@ function OilPainting(){
     canvas.width = width;
     canvas.height = height;
 
-    console.log(parent.style)
-    console.log( width, height)
-    console.log( canvas.width, canvas.height )
+    // console.log(parent.style)
+    // console.log( width, height)
+    // console.log( canvas.width, canvas.height )
 
     startPos = {x: width/2, y: height/2};
     prevPos = {x: width/2, y: 0};
@@ -45,7 +45,7 @@ function OilPainting(){
   
   var MouseMove = function(e) {
 
-    console.log("mousemove");
+    // console.log("mousemove");
 
     var distance = Math.sqrt(Math.pow(prevPos.x - startPos.x, 2) +
                  Math.pow(prevPos.y - startPos.y, 2));

@@ -185,11 +185,24 @@ section.section--center .section__text:not(:last-child) {
   box-sizing: border-box;
   z-index: 100;
   border: 1px solid rgba(0, 0, 0, 0.12);
+  position: relative;
+
 }
 
 .section__portfolio-img img{
   max-width: 240px;
 }
+
+#slideshow img{
+  position: absolute;
+  transition: opacity 1.5s;
+  opacity:0;
+}
+#slideshow img.fadeIn {
+  opacity:1;
+}
+
+
 
 /* canvas */
 
