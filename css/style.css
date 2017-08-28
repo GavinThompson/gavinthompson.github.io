@@ -169,13 +169,19 @@ section.section--center .section__text:not(:last-child) {
 
 /*  */
 
-.section__circle-container__circle img{
+#about .section__circle-container__circle{
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+}
+
+#about .section__circle-container__circle img{
   height: 100%;
   width: 100%;
   border-radius: 100%;
 }
 
-.skills .mdl-chip__contact .material-icons{
+.mdl-chip__contact .material-icons{
   position: relative;
   top: 3px;
 }
@@ -195,7 +201,7 @@ section.section--center .section__text:not(:last-child) {
 
 #slideshow img{
   position: absolute;
-  transition: opacity 1.5s;
+  transition: opacity 3.5s;
   opacity:0;
 }
 #slideshow img.fadeIn {
