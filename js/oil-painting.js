@@ -40,13 +40,14 @@ function OilPainting(){
     startPos = {x: width/2, y: height/2};
     prevPos = {x: width/2, y: 0};
   
-    canvas.addEventListener('mousemove', MouseMove, false);
-    canvas.addEventListener('click', MouseDown, false);
-    canvas.addEventListener('dblclick', MouseDbl, false); 
+    canvas.addEventListener('mousemove', mouseMove, false);
+    canvas.addEventListener('click', changeColour, false);
+    palette.addEventListener('click', changeColour, false);
+    canvas.addEventListener('dblclick', clearCanvas, false); 
   }
   
   
-  var MouseMove = function(e) {
+  var mouseMove = function(e) {
 
     // console.log("mousemove");
 
@@ -92,7 +93,7 @@ function OilPainting(){
      context.closePath();
   }
   
-  var MouseDown = function(e) {
+  var changeColour = function(e) {
     e.preventDefault();
     colour = '#'+Math.floor(Math.random()*16777215).toString(16);
     context.fillStyle = colour;
@@ -102,7 +103,7 @@ function OilPainting(){
     palette.style.setProperty("background-color", colour, "important");
   }
   
-  var MouseDbl = function(e) {
+  var clearCanvas = function(e) {
     e.preventDefault();
     context.clearRect(0, 0, width, height);
   }
