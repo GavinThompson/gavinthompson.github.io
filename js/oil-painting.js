@@ -4,6 +4,7 @@
 // https://codepen.io/tholman/pen/ifDak
 
 function OilPainting(){
+
   
   var canvas;
   var context;
@@ -15,8 +16,11 @@ function OilPainting(){
   var startPos;
   var prevPos;
   var dist = {x: 0, y: 0};
-  var colour = '#'+Math.floor(Math.random()*16777215).toString(16);
-  
+  // var colour = '#'+Math.floor(Math.random()*16777215).toString(16);
+  var colour = "#ff4081"
+  // starting colour is material design lite pink button/palette button color
+  var palette;
+
   
   this.initialize = function(canvasElement, parentElement){
     canvas  = document.getElementById( canvasElement );
@@ -30,9 +34,8 @@ function OilPainting(){
     canvas.width = width;
     canvas.height = height;
 
-    // console.log(parent.style)
-    // console.log( width, height)
-    // console.log( canvas.width, canvas.height )
+    palette = document.getElementById("palette");
+    
 
     startPos = {x: width/2, y: height/2};
     prevPos = {x: width/2, y: 0};
@@ -93,7 +96,10 @@ function OilPainting(){
     e.preventDefault();
     colour = '#'+Math.floor(Math.random()*16777215).toString(16);
     context.fillStyle = colour;
-      context.strokeStyle = colour;
+    context.strokeStyle = colour;
+
+    var importantColour = colour + " " + "!important";
+    palette.style.setProperty("background-color", colour, "important");
   }
   
   var MouseDbl = function(e) {

@@ -51,7 +51,7 @@ main .page-content {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-#add {
+#palette {
   position: absolute;
   right: 40px;
   top: 36px;
