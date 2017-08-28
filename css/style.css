@@ -138,31 +138,7 @@ section.section--center .section__text:not(:last-child) {
 .mdl-layout__tab-panel:not(#overview) {
   background-color: white;
 }
-#features section {
-  margin-bottom: 72px;
-}
-#features h4, #features h5 {
-  margin-bottom: 16px;
-}
-.toc {
-  border-left: 4px solid #C1EEF4;
-  margin: 24px;
-  padding: 0;
-  padding-left: 8px;
-  display: flex;
-  flex-direction: column;
-}
-.toc h4 {
-  font-size: 0.9rem;
-  margin-top: 0;
-}
-.toc a {
-  color: #4DD0E1;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 28px;
-  display: block;
-}
+
 .mdl-menu__container {
   z-index: 99;
 }
