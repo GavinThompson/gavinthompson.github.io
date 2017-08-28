@@ -169,7 +169,8 @@ section.section--center .section__text:not(:last-child) {
 
 /*  */
 
-#about .section__circle-container__circle{
+#about .section__circle-container__circle,
+#contact .section__circle-container__circle{
   height: 120px;
   width: 120px;
   border-radius: 100%;
@@ -208,6 +209,9 @@ section.section--center .section__text:not(:last-child) {
   opacity:1;
 }
 
+#contact ul{
+  list-style: none;
+}
 
 
 /* canvas */
